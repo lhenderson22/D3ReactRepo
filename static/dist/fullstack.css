@@ -1,0 +1,47 @@
+.page-header {
+    min-height: 100%;
+    text-align: center;
+    margin-top: -15px;
+}
+.header-contents {
+    top: 50%;
+    position:absolute;
+}
+.header-contents h1 {
+    font-size: 120px;
+    font-weight: 300;
+}
+.header-contents button {
+    font-size: 35px;
+    border-radius: 30px;
+    font-weight: 300;
+}
+
+.header-contents button:focus {
+    outline: None;
+}
+
+.top{
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #4ec9ae;
+    margin: auto;
+    width: 90%;
+    border-radius:4px;
+    height: 400px;
+    box-shadow: 1px 1px 1px 0px rgba(37,41,51,1);
+}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
