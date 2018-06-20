@@ -21,35 +21,23 @@ import React from "react";
  //       d3.select(myCircle).style("fill","green");
  //});
 
- function readTextFile(file)
- {
-     var rawFile = new XMLHttpRequest();
-     rawFile.open("GET", file, false);
-     rawFile.onreadystatechange = function ()
-     {
-         if(rawFile.readyState === 4)
-         {
-             if(rawFile.status === 200 || rawFile.status == 0)
-             {
-                 var allText = rawFile.responseText;
-                 alert(allText);
-             }
-         }
-     }
-     rawFile.send(null);
- }
+
+
 
 export default class Graph extends React.Component {
+    
     constructor(props) {
         super(props);
     }
 
     render() {
-        var data = { A : .5678,
-            B : .3410,
-            C : .4345};
-     
-        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+
+        //d3.csv("/static/data.csv", function(data) {
+        //    console.log(data[0]);
+            
+        //});
+
+            var margin = {top: 20, right: 20, bottom: 30, left: 40},
           width = 600 - margin.left - margin.right,
           height = 500 - margin.top - margin.bottom;
      
@@ -95,7 +83,7 @@ export default class Graph extends React.Component {
           .text("Frequency");
      
         svg.selectAll(".bar")
-          .data(data)
+          //.data(data)
           .enter().append("rect")
           .attr("class", "bar")
           .attr("x", (d) => x(d.letter))
@@ -103,8 +91,9 @@ export default class Graph extends React.Component {
           .attr("y", (d) => y(d.frequency))
           .attr("height", (d) => {return height - y(d.frequency)});
           
+        
         return div.toReact();
+        
     }
 }
-
 

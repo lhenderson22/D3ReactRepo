@@ -9,8 +9,18 @@
     <title>I am trying again</title>
   </head>
   <body>
+      <script>
+
+          d3.csv("/data/data.js", function (data) {
+              console.log(data); 
+          });
+      
+      </script>
+      <div> Hello</div>
     <div id="content" />
-    <script src="dist/bundle.js" type="text/javascript"></script>
+    <svg width="960" height="500"></svg>
+    <script src="/dist/bundle.js" type="text/javascript"></script>
+    <script src="/data/data.js" type="text/javascript"></script>
     
   </body>
 </html>
